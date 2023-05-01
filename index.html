@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Lego Set Calculator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <ul id="top-banner">
+        <li id = "intro">Alvin's Bestie Tools</li>
+    </ul>
+
+    <h1 class="header">Lego Set Combination Calculator</h1>
+    <p>Welcome to my Lego Set Combination Calculator! <br>
+        Please enter your desired input and press add. <br>
+        Before pressing calculate, please enter your desired price range.
+    </p>
+    <p>
+        
+    </p>
+    <div id="price-title">
+        <h4>Minimum Price   - Maximum Price</h4>
+    </div>
+    <div id="price-range">
+        <input type="number"/>
+        <input type="number"/>
+    </div>
+    <div class="tracker-container">
+        <table id = table-list cellspacing="0">
+            <thead>
+                <tr id = table-header >
+                    <th>Set Name</th>
+                    <th>Set Price</th>
+                    <th>&nbsp;<th>
+                </tr>
+                <tr id = "add-new">
+                    <td class = "name">
+                        <input type="text" id="nameInput" />
+                    </td>
+                    <td class = "price">
+                        <input type="number" id="priceInput"/>
+                    </td>
+                    <td class = "add">
+                        <button id="add-button" onclick="main()">Add</button>
+                    </td>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

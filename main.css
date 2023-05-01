@@ -1,0 +1,95 @@
+body{
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+}
+
+#top-banner{
+    padding: 0;
+    margin: 0;
+    background-color: navy;
+    color: sandybrown;
+    display: flex;
+    list-style: none;
+}
+
+#intro, #roll-result
+{
+    margin-left:10px;
+    padding: .5em;
+}
+
+.header{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: block;
+    white-space: nowrap;
+    background-color: sandybrown;
+    color: #333;
+}
+
+p{
+    text-align: center;
+}
+
+#price-title{
+    display: flex;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+    padding: 0.5rem;
+    align-items: flex-start;
+}
+
+#price-title.header {
+    padding: 50px;
+}
+
+#price-range{
+    display: flex;
+    list-style: none;
+    text-align: center;
+    margin: auto auto;
+    justify-content: center;
+}
+
+.tracker-container{
+    padding: 1em;
+}
+
+#table-list
+{
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+#table-list td
+{
+    padding: 1em;
+    border-bottom: 1px solid #ccc;
+}
+
+#table-header th
+{
+    padding: 0.5 em;
+    border-bottom: 1px solid #ccc;
+}
+
+#add-new
+{
+    width: 100%;
+    text-align: center;
+}
+
+
+#table-body .table-row td
+{
+    text-align: center;
+}
+
+input
+{
+    padding: 0.5em
+}
