@@ -6,7 +6,6 @@
     <title>Lego Set Calculator</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
 </head>
 <body>
     <ul id="top-banner">
@@ -25,8 +24,14 @@
         <h4>Minimum Price   - Maximum Price</h4>
     </div>
     <div id="price-range">
-        <input type="number"/>
-        <input type="number"/>
+        <input type="number" id="minimum-input"/>
+        <input type="number" id="maximum-input"/>
+    </div>
+    <div id="output-container">
+        <button id="calculate-button" onclick="calculate()">Calculate</button>
+        <div id="combo-output">
+            
+        </div>
     </div>
     <div class="tracker-container">
         <table id = table-list cellspacing="0">

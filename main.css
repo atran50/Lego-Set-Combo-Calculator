@@ -54,6 +54,12 @@ p{
     justify-content: center;
 }
 
+#output-container{
+    margin-top: 1em;
+    text-align: center;
+    justify-content: center;
+}
+
 .tracker-container{
     padding: 1em;
 }
