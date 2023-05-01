@@ -13,7 +13,6 @@ var approvedCombos = new Map();
 var rangeMinimum;
 var rangeMaxiumum;
 
-//const set = ['x', 'y', 'z'];
 
 function setRangeMin(minimum) {
     if(minimum) {
@@ -33,6 +32,7 @@ function setRangeMax(maximum) {
 
 }
 
+// Retrieves input from set name and set price elements.
 function getInput() {
     var name = document.getElementById("nameInput");
     var price = document.getElementById("priceInput");
@@ -46,10 +46,12 @@ function getInput() {
     price.value = "";
 }
 
+// Saves the key pair 
 function saveInput() {
     addLegoSet(nameVal, priceVal);
 }
 
+// Displays the table rows
 function renderTableRows()
 {
     tableBody.innerHTML = "";
@@ -60,6 +62,7 @@ function renderTableRows()
     }
 }
 
+// Generates a specific table row given the name and price
 function buildRow(name, price)
  {
     var string;
@@ -80,6 +83,7 @@ function buildRow(name, price)
     return string;
  }
 
+ // Called directly to remove a table row
 function remove(elem) {
     var thisTableRow = elem.parentNode.parentNode;
     var rowChildElements = thisTableRow.children;
@@ -101,6 +105,7 @@ function getKeys() {
     return keyArray;
 }
 
+// Sourced from https://www.tutorialspoint.com/finding-power-set-for-a-set-in-javascript-power-set
 function computePowerSet(legoSets) {
     const powerSet = (arr = []) => {
        const res = [];
@@ -121,6 +126,7 @@ function computePowerSet(legoSets) {
     return powerSet(legoSets);
 }
 
+// Makes key pairs of a combination of lego sets and their total price
 function mapComboPrices(powerSet) {
     console.log(powerSet);
     var comboPrices = new Map();
@@ -131,6 +137,7 @@ function mapComboPrices(powerSet) {
     return comboPrices;
 }
 
+// Adds and returns the prices of a combination of lego sets
 function getComboPrice(combo) {
     var comboTotal = 0.0;
     for(i in combo) {
@@ -141,14 +148,15 @@ function getComboPrice(combo) {
     return Math.round((comboTotal + Number.EPSILON) * 100) / 100;
 }
 
+// Called whenever a new table row is being added
 function main() {
     getInput();
     saveInput();
     renderTableRows();
 }
 
+// Called whenever the user wants to calculate their desired combinations
 function calculate() {
-
     console.log("Printing Lego Sets");
     console.log(legoSets);
     
@@ -168,12 +176,14 @@ function calculate() {
     
 }
 
+// Helper method for getting the combos within the budget range
 function logMapElements(value, key, map) {
     if (value >= rangeMinimum && value <= rangeMaxiumum) {
         approvedCombos.set(key, value);
     }
 }
 
+// Helper method for adding the approved combos to HTML
 function displayApprovedCombos() {
     const comboOutput = document.getElementById("combo-output");
     comboOutput.innerHTML = "";
